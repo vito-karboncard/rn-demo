@@ -1,21 +1,21 @@
+import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
-import { Button, StyleSheet, Text, View } from "react-native";
+import { Button, SafeAreaView, StyleSheet, Text, View } from "react-native";
+import Naviagtion from "./navigation";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-      <Button title="ssss" />
-    </View>
+    <NavigationContainer>
+      <SafeAreaView style={styles.appContainer}>
+        <Naviagtion />
+        <StatusBar style="auto" />
+      </SafeAreaView>
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  appContainer: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
   },
 });
